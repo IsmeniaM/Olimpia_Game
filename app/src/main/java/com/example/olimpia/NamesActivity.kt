@@ -17,6 +17,7 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>?=null
     private var mSelectedOptionPosition: Int = 0
+    private var mCorrectAnswers: Int = 0
 
 
 
@@ -28,13 +29,14 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         supportActionBar?.hide()
 
-        mQuestionList = Constants.getQuestions()
+        mQuestionList = ConstantsNames.getQuestions()
         setQuestion()
 
         name_option_one.setOnClickListener(this)
         name_option_two.setOnClickListener(this)
         name_option_three.setOnClickListener(this)
         name_option_four.setOnClickListener(this)
+        btn_submit_name.setOnClickListener(this)
 
     }
 
@@ -57,6 +59,7 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
         progressBar.progress = mCurrentPosition
         tv_progress.text = "$mCurrentPosition" + "/" + progressBar.max
         tv_question_name.text = question.question
+        names_image.setImageResource(question.image)
         name_option_one.text = question.optionOne
         name_option_two.text = question.optionTwo
         name_option_three.text = question.optionThree
@@ -71,13 +74,13 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
                     selectedOptionView(name_option_one, 1)
                 }
                 R.id.name_option_two -> {
-                    selectedOptionView(name_option_two, 1)
+                    selectedOptionView(name_option_two, 2)
                 }
                 R.id.name_option_three -> {
-                    selectedOptionView(name_option_three, 1)
+                    selectedOptionView(name_option_three, 3)
                 }
                 R.id.name_option_four -> {
-                    selectedOptionView(name_option_four, 1)
+                    selectedOptionView(name_option_four, 4)
                 }
                 R.id.btn_submit_name -> {
 
@@ -91,7 +94,7 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
                             }
                             else -> {
                                 Toast.makeText(
-                                    this, "You've sucessfully completed the quiz",
+                                    this, "You've successfully completed the quiz",
                                     Toast.LENGTH_SHORT
                                 ).show()
                                 val intent = Intent(this, HomeActivity::class.java)
@@ -123,7 +126,7 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
         options.add(2, name_option_three)
         options.add(3, name_option_four)
 
-        for (option in options) {
+        for (option in options){
             option.setTextColor(Color.parseColor("#7A8089"))
             option.typeface = Typeface.DEFAULT
             option.background=ContextCompat.getDrawable(this, R.drawable.default_option_border_bg

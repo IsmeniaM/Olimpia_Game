@@ -7,20 +7,22 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/ic_olimpia_screen"
+    android:background="@drawable/ic_screenolimpia"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="369dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="124dp"
-        android:shadowColor="#673AB7"
+        android:layout_marginBottom="70dp"
+        android:background="@android:color/holo_orange_light"
         android:text="@string/startButton"
+        android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

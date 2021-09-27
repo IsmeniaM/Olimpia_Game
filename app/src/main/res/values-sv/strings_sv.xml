@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Olimpia</string>
+    <string name="startButton">BÖRJA</string>
+    <string name="btnGo">Spela!</string>
+
+</resources>

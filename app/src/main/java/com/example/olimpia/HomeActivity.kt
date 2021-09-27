@@ -1,11 +1,10 @@
 package com.example.olimpia
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         val NamesButten = findViewById<Button>(R.id.btnNames)
 
         NamesButten.setOnClickListener {
-            Intent(this, NamesActivity::class.java).also {
+            Intent(this, InstructionsActivityNames::class.java).also {
                 startActivity(it)
 
             }

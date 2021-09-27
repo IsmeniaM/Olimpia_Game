@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Olimpia">
         <activity
+            android:name=".InstructionsActivityNames"
+            android:exported="true" />
+        <activity
+            android:name=".ResultActivityCountry"
+            android:exported="true" />
+        <activity
             android:name=".LogoActivity"
             android:exported="true" />
         <activity
@@ -18,8 +24,7 @@
         <activity
             android:name=".NamesActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name=".HomeActivity"
             android:exported="true" />
@@ -27,9 +32,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            >
-
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

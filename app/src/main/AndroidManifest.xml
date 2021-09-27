@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Olimpia">
         <activity
+            android:name=".InstructionsActivityCountries"
+            android:exported="true" />
+        <activity
             android:name=".InstructionsActivityNames"
             android:exported="true" />
         <activity

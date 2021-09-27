@@ -30,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
         val CountriesButten = findViewById<Button>(R.id.btnCountries)
 
         CountriesButten.setOnClickListener {
-            Intent(this,CountriesActivity::class.java).also {
+            Intent(this,InstructionsActivityCountries::class.java).also {
                 startActivity(it)
 
             }

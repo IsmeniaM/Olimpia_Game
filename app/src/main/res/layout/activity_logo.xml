@@ -7,106 +7,115 @@ android:layout_height="match_parent"
 android:fillViewport="true"
 tools:context=".LogoActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
-
-    <TextView
-        android:id="@+id/tv_question_logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:textColor="#363A43"
-        android:textSize="22sp"
-        android:text="What is this country?" />
-
     <LinearLayout
-        android:id="@+id/ll_progress_details_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        >
-        <ProgressBar
-            android:id="@+id/progressBar_logo"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:max="5"
-            android:minHeight="50dp"
-            android:progress="0"
-            android:indeterminate="false"
-            />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="?android:attr/listDivider" />
 
         <TextView
-            android:id="@+id/tv_progress_logo"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_question_logo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text=" McDonalds?"
+            android:textColor="#363A43"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_progress_details_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressBar_logo"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:max="5"
+                android:minHeight="50dp"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/tv_progress_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="0/5"
+                android:textColorHint="#7A8089"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/logo_option_one"
+            android:layout_width="118dp"
+            android:layout_height="117dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_option_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColorHint="#7A8089"
-            android:textSize="14sp"
-            android:text="0/5" />
+            android:src="@drawable/tap" />
+
+        <ImageView
+            android:id="@+id/logo_option_two"
+            android:layout_width="118dp"
+            android:layout_height="117dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/espressohouse" />
+
+        <ImageView
+            android:id="@+id/logo_option_three"
+            android:layout_width="118dp"
+            android:layout_height="117dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/mcdonalds" />
+
+        <ImageView
+            android:id="@+id/logo_option_four"
+            android:layout_width="118dp"
+            android:layout_height="117dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/default_option_border_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/apple" />
+
+        <Button
+            android:id="@+id/btn_submit_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#673AB7"
+            android:text="SUBMIT"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/logo_option_one"
-        android:layout_width="118dp"
-        android:layout_height="117dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/default_option_border_bg"
-        android:gravity="center"
-        android:padding="15dp"
-        android:src="@drawable/tap" />
-
-    <ImageView
-        android:id="@+id/logo_option_two"
-        android:layout_width="118dp"
-        android:layout_height="117dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/default_option_border_bg"
-        android:gravity="center"
-        android:padding="15dp"
-        android:src="@drawable/espressohouse" />
-
-    <ImageView
-        android:id="@+id/logo_option_three"
-        android:layout_width="118dp"
-        android:layout_height="117dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/default_option_border_bg"
-        android:gravity="center"
-        android:padding="15dp"
-        android:src="@drawable/mcdonalds" />
-
-    <ImageView
-        android:id="@+id/logo_option_four"
-        android:layout_width="118dp"
-        android:layout_height="117dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/default_option_border_bg"
-        android:gravity="center"
-        android:padding="15dp"
-        android:src="@drawable/apple" />
-
-    <Button
-        android:id="@+id/btn_submit_logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="#673AB7"
-        android:text="SUBMIT"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
-
-</LinearLayout>
 
 
 </ScrollView>

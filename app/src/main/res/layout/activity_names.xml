@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/celebrity_image"
             android:src="@drawable/beyonce" />
 
         <TextView
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:text="What are your favourite color?"
+            android:text="@string/question_names"
             android:textColor="#363A43"
             android:textSize="22sp" />
 
@@ -72,7 +72,7 @@
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="#757575"
             android:textSize="18sp"
             tools:text="Apple" />
 
@@ -84,9 +84,10 @@
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="#757575"
             android:textSize="18sp"
-            tools:text="Macaco"/>
+            tools:text="Macaco" />
+
         <TextView
             android:id="@+id/name_option_three"
             android:layout_width="match_parent"
@@ -95,9 +96,10 @@
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="#757575"
             android:textSize="18sp"
-            tools:text="Nao sei"/>
+            tools:text="Nao sei" />
+
         <TextView
             android:id="@+id/name_option_four"
             android:layout_width="match_parent"
@@ -106,9 +108,9 @@
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="#757575"
             android:textSize="18sp"
-            tools:text="Banana"/>
+            tools:text="Banana" />
 
         <Button
             android:id="@+id/btn_submit_name"
@@ -116,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="#673AB7"
-            android:text="SUBMIT"
+            android:text="@string/submit"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 

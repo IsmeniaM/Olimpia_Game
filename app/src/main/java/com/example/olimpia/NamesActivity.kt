@@ -29,6 +29,8 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         supportActionBar?.hide()
 
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+
         mQuestionList = ConstantsNames.getQuestions()
         setQuestion()
 

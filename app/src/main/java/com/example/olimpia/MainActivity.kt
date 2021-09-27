@@ -1,10 +1,10 @@
 package com.example.olimpia
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         startButten.setOnClickListener {
             Intent(this, HomeActivity::class.java).also {
-                startActivity(it)
+                startActivity(it);
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
             }
         }
 

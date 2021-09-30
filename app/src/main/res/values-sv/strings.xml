@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="question_names">What are your favourite color?</string>
-    <string name="submit">SUBMIT</string>
+    <string name="app_name">Olimpia</string>
+    <string name="startButton">BÖRJA</string>
+    <string name="question_names">Är detta Kändisnamn BEYONCE?</string>
+    <string name="submit">SCKICKA IN</string>
     <string name="celebrity_image">celebrityImage</string>
+    <string name="countries">LÄNDER</string>
+    <string name="choose_your_favourite_category">VÄLJ DIN FAVORITKATEGORI:</string>
+    <string name="names">NAMN</string>
 </resources>

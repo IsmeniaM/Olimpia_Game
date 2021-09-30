@@ -11,9 +11,9 @@
         android:id="@+id/chooseCategory"
         android:layout_width="377dp"
         android:layout_height="45dp"
-        android:text="Choose your favourite category:"
+        android:text="@string/choose_your_favourite_category"
         android:textAlignment="center"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/design_default_color_on_secondary"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnNames"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,31 +23,18 @@
         app:layout_constraintVertical_bias="0.888" />
 
     <Button
-        android:id="@+id/btnLogo"
-        android:layout_width="409dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="204dp"
-        android:text="LOGO"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/btnCountries"
         android:layout_width="409dp"
         android:layout_height="96dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="8dp"
-        android:text="Countries"
+        android:layout_marginBottom="208dp"
+        android:background="@drawable/default_option_border_bg"
+        android:text="@string/countries"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -58,7 +45,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/btn_home"
-        android:text="NAMES"
+        android:text="@string/names"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/btnCountries"
         app:layout_constraintEnd_toEndOf="parent"

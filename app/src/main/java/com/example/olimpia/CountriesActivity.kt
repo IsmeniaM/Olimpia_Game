@@ -17,8 +17,6 @@ class CountriesActivity : AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition : Int = 0
     private var mCorrectAnswers: Int = 0
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_countries)
@@ -94,6 +92,7 @@ class CountriesActivity : AppCompatActivity(), View.OnClickListener {
                 selectedOptionView(country_option_four,4)
             }
             R.id.btn_submit_country ->{
+
                 if (mSelectedOptionPosition == 0 ){
                     mCurrentPosition++
 

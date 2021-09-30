@@ -40,16 +40,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        // När man trycker på "Logo"
 
-        val LogoButten = findViewById<Button>(R.id.btnLogo)
-
-        LogoButten.setOnClickListener {
-            Intent(this,LogoActivity::class.java).also {
-                startActivity(it)
-
-            }
-        }
 
 
     }

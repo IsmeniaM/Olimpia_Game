@@ -5,76 +5,66 @@ object ConstantsNames {
     const val TOTAL_QUESTIONS: String = "total_question"
     const val CORRECT_ANSWERS: String = "correct_answers"
 
-    fun getQuestions (): ArrayList<Question>{
-        val questionsList = ArrayList <Question>()
+    fun getQuestions (): ArrayList<QuestionsName>{
+        val questionsList = ArrayList <QuestionsName>()
 
         // Question 1
 
-        val que1 = Question(
+        val que1 = QuestionsName(
             1,
-            "What is the name of this celebrity?",
+            "Is this Celebrity name BEYONCE?",
             R.drawable.beyonce,
-            "Adele MBE",
-            "Brittney Spears",
-            "Beyonce",
-            "Mariah Cary",
-            correctAnswer = 3
+            "NO",
+            "YES",
+            correctAnswer = 2
         )
 
         questionsList.add(que1)
 
         // Question 2
 
-        val que2 = Question(
+        val que2 = QuestionsName(
             2,
-            "What is the name of this celebrity?",
+            "Is this Celebrity name RIHANNA?",
             R.drawable.adele,
-            "Madonna",
-            "Adele MBE",
-            "Sandra Bullock",
-            "Nicki Minaj",
-            correctAnswer = 2
+            "NO",
+            "YES",
+            correctAnswer = 1
         )
 
         questionsList.add(que2)
 
         // Question 3
-        val que3 = Question(
+        val que3 = QuestionsName(
             3,
-            "What is the name of this celebrity?",
+            "Is this Celebrity name NICKI MINAJ?",
             R.drawable.nickiminaj,
-            "Nicki Minaj",
-            "Angelina Julie",
-            "Mariana Rosa",
-            "Beyonce",
-            correctAnswer = 1
+            "NO",
+            "YES",
+            correctAnswer = 2
         )
 
         questionsList.add(que3)
 
         // Question 4
-        val que4 = Question(
+        val que4 = QuestionsName(
             4,
-            "What is the name of this celebrity?",
+            "Is this Celebrity name JAY-Z?",
             R.drawable.kanyewest,
-            "Justin Bieber",
-            "Mickael Jackson",
-            "Justin Timberlake",
-            "Kanye West",
-            correctAnswer = 4
+            "NO",
+            "YES",
+            correctAnswer = 1
         )
 
         questionsList.add(que4)
 
         // Question 5
-        val que5 = Question(
+        val que5 = QuestionsName(
             5,
-            "What is the name of this celebrity?",
+            "Is this Celebrity name MICKAEL JACKSON?",
             R.drawable.mickaeljackson,
-            "Justin Bieber",
-            "Mickael Jackson",
-            "Justin Timberlake",
-            "Kanye West",
+            "NO",
+            "YES",
             correctAnswer = 2
         )
 

@@ -65,52 +65,26 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/name_option_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
+            android:id="@+id/option_true"
+            android:layout_width="158dp"
+            android:layout_height="45dp"
             android:gravity="center"
-            android:padding="15dp"
-            android:textColor="#757575"
-            android:textSize="18sp"
-            tools:text="Apple" />
+            android:text="TRUE"
+            android:background="@drawable/default_option_border_bg"
+            android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/name_option_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
+            android:id="@+id/option_false"
+            android:layout_width="157dp"
+            android:layout_height="46dp"
+            android:text="FALSE"
             android:gravity="center"
-            android:padding="15dp"
-            android:textColor="#757575"
-            android:textSize="18sp"
-            tools:text="Macaco" />
+            android:background="@drawable/default_option_border_bg"
+            android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/name_option_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
-            android:gravity="center"
-            android:padding="15dp"
-            android:textColor="#757575"
-            android:textSize="18sp"
-            tools:text="Nao sei" />
-
-        <TextView
-            android:id="@+id/name_option_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
-            android:gravity="center"
-            android:padding="15dp"
-            android:textColor="#757575"
-            android:textSize="18sp"
-            tools:text="Banana" />
+        <Space
+            android:layout_width="376dp"
+            android:layout_height="14dp" />
 
         <Button
             android:id="@+id/btn_submit_name"

@@ -27,7 +27,7 @@
         android:layout_width="333dp"
         android:layout_height="106dp"
         android:layout_marginTop="48dp"
-        android:text="In this Category you have to choose the right \n Celebrity for each image."
+        android:text="In this Category you have to choose YES or NO for the right Celebrity Name."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"

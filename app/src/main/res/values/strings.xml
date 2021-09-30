@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Olimpia</string>
     <string name="startButton">START</string>
-    <string name="btnGo">GO!</string>
     <string name="question_names">What are your favourite color?</string>
     <string name="submit">SUBMIT</string>
     <string name="celebrity_image">celebrityImage</string>
+    <string name="countries">Countries</string>
+    <string name="choose_your_favourite_category">Choose your favourite category:</string>
+    <string name="names">NAMES</string>
 </resources>

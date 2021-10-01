@@ -26,7 +26,7 @@ class CountriesActivity : AppCompatActivity(), View.OnClickListener {
 
         overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
 
-        mQuestionsList = Constants.getQuestions()
+        mQuestionsList = ConstantsCountry.getQuestions()
         setQuestion()
 
         country_option_one.setOnClickListener (this)
@@ -101,8 +101,8 @@ class CountriesActivity : AppCompatActivity(), View.OnClickListener {
                             setQuestion()
                         }else ->{
                             val intent = Intent(this, ResultActivityCountry::class.java)
-                            intent.putExtra(Constants.CORRECT_ANSWERS,mCorrectAnswers)
-                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                            intent.putExtra(ConstantsCountry.CORRECT_ANSWERS,mCorrectAnswers)
+                            intent.putExtra(ConstantsCountry.TOTAL_QUESTIONS, mQuestionsList!!.size)
                             startActivity(intent)
 
                         }

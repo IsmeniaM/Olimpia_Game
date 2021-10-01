@@ -93,8 +93,8 @@ class NamesActivity : AppCompatActivity(), View.OnClickListener {
                         }
                         else -> {
                             val intent = Intent(this, ResultActivityCountry::class.java)
-                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
-                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionList!!.size)
+                            intent.putExtra(ConstantsCountry.CORRECT_ANSWERS, mCorrectAnswers)
+                            intent.putExtra(ConstantsCountry.TOTAL_QUESTIONS, mQuestionList!!.size)
                             startActivity(intent)
 
                         }

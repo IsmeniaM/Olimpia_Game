@@ -8,4 +8,8 @@
     <string name="countries">LÄNDER</string>
     <string name="choose_your_favourite_category">VÄLJ DIN FAVORITKATEGORI:</string>
     <string name="names">NAMN</string>
+    <string name="imagecountry">ImageCountry</string>
+    <string name="what_is_this_country">Vilket länd är det?</string>
+    <string name="submitbotton">Sckicka in</string>
+
 </resources>

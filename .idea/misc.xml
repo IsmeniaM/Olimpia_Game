@@ -14,10 +14,10 @@
         <entry key="app/src/main/res/layout/activity_countries.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_instructions_countries.xml" value="0.29583333333333334" />
-        <entry key="app/src/main/res/layout/activity_instructions_names.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_instructions_names.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_logo.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_names.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_names.xml" value="0.15064102564102563" />
         <entry key="app/src/main/res/layout/activity_result_country.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_result_logo.xml" value="0.21784420289855072" />
         <entry key="app/src/main/res/layout/activity_result_names.xml" value="0.1" />

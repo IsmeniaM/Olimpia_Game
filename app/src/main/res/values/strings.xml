@@ -7,4 +7,7 @@
     <string name="countries">Countries</string>
     <string name="choose_your_favourite_category">Choose your favourite category:</string>
     <string name="names">NAMES</string>
+    <string name="imagecountry">ImageCountry</string>
+    <string name="what_is_this_country">What is this country?</string>
+    <string name="submitbotton">SUBMIT</string>
 </resources>

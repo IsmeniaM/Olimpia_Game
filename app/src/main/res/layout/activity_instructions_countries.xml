@@ -24,14 +24,14 @@
 
     <TextView
         android:id="@+id/explanation_countries"
-        android:layout_width="333dp"
-        android:layout_height="106dp"
+        android:layout_width="264dp"
+        android:layout_height="123dp"
         android:layout_marginTop="48dp"
         android:text="In this Category you have to choose the right \n Country for each image."
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idea_image" />
@@ -50,12 +50,13 @@
         android:id="@+id/button_play_countries"
         android:layout_width="83dp"
         android:layout_height="79dp"
+        android:backgroundTint="#36E2C3"
         android:text="PLAY"
-        android:background="@color/cardview_dark_background"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explanation_countries" />
+        app:layout_constraintTop_toBottomOf="@+id/explanation_countries"
+        app:layout_constraintVertical_bias="0.38" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

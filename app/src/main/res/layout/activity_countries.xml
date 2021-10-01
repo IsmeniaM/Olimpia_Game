@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/imagecountry"
             android:src="@drawable/america" />
 
         <TextView
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:text="What is this country?"
+            android:text="@string/what_is_this_country"
             android:textColor="#363A43"
             android:textSize="22sp" />
 
@@ -117,8 +117,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="#673AB7"
-            android:text="SUBMIT"
+            android:backgroundTint="#36E2C3"
+            android:text="@string/submitbotton"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 

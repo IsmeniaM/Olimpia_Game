@@ -50,21 +50,22 @@
         android:id="@+id/btn_register_score_names"
         android:layout_width="275dp"
         android:layout_height="79dp"
-        android:backgroundTint="@color/teal_200"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/teal_200"
+        android:clickable="true"
         android:text="Register my score"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btnNames_finish"
-        android:layout_width="167dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/cardview_light_background"
+        android:layout_width="198dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#CE1B1B"
         android:text="FINISH"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 

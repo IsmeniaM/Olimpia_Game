@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_result_country.*
+import kotlinx.android.synthetic.main.activity_result_names.*
 
 class ResultActivityCountry : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +21,15 @@ class ResultActivityCountry : AppCompatActivity() {
         tv_score_countries.text = "$correctAnswers out of $totalQuestions"
 
 
+        btn_register_score_country.setOnClickListener {
+            startActivity(Intent(this, DataActivity::class.java))
+        }
+
         btnCountries_finish.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
+
+
 
 
     }

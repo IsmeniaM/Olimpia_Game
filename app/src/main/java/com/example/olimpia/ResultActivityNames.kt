@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_data.*
 import kotlinx.android.synthetic.main.activity_result_names.*
 
 class ResultActivityNames : AppCompatActivity() {
@@ -26,6 +27,19 @@ class ResultActivityNames : AppCompatActivity() {
         btnNames_finish.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
+
+
+        registerData()
+
+
+
+    }
+
+    fun registerData () {
+        btn_register_score_names.setOnClickListener {
+            startActivity(Intent(this, DataActivity::class.java))
+        }
+
     }
 
 

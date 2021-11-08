@@ -47,11 +47,21 @@
         tools:text="Your Score is 9 out of 10" />
 
     <Button
+        android:id="@+id/btn_register_score_country"
+        android:layout_width="275dp"
+        android:layout_height="79dp"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="20dp"
+        android:text="Register my score"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
         android:id="@+id/btnCountries_finish"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="198dp"
+        android:layout_height="68dp"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#36E2C3"
+        android:backgroundTint="#CE1B1B"
         android:text="FINISH"
         android:textColor="@color/white"
         android:textSize="18sp"

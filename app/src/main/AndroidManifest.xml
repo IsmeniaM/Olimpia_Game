@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Olimpia">
         <activity
-            android:name=".ResultActivityNames"
-            android:exported="true" />
+            android:name=".DataActivity"
+            android:exported="false" />
         <activity
-            android:name=".ResultActivityLogo"
+            android:name=".ResultActivityNames"
             android:exported="true" />
         <activity
             android:name=".InstructionsActivityCountries"
@@ -23,9 +23,6 @@
             android:exported="true" />
         <activity
             android:name=".ResultActivityCountry"
-            android:exported="true" />
-        <activity
-            android:name=".LogoActivity"
             android:exported="true" />
         <activity
             android:name=".CountriesActivity"

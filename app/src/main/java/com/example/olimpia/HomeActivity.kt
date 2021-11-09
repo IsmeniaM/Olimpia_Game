@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -35,6 +36,15 @@ class HomeActivity : AppCompatActivity() {
 
         CountriesButten.setOnClickListener {
             Intent(this,InstructionsActivityCountries::class.java).also {
+                startActivity(it)
+
+            }
+        }
+
+        // När man trycker på menyn
+
+        floatingActionButtonHome.setOnClickListener {
+            Intent(this,DataActivity::class.java).also {
                 startActivity(it)
 
             }

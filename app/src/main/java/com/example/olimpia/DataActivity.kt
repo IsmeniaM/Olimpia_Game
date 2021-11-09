@@ -1,5 +1,6 @@
 package com.example.olimpia
 
+import android.content.Intent
 import android.graphics.drawable.ClipDrawable.VERTICAL
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,18 +11,24 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.ViewModelStores.of
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.olimpia.ConstantsCountry.CORRECT_ANSWERS
+import com.example.olimpia.ConstantsCountry.TOTAL_QUESTIONS
 import com.example.olimpia.data.MainActivityViewModel
 import com.example.olimpia.data.RecyclerViewAdapter
 import com.example.olimpia.data.db.PlayerEntity
 import kotlinx.android.synthetic.main.activity_data.*
+import kotlinx.android.synthetic.main.activity_result_country.*
 import kotlinx.android.synthetic.main.activity_result_names.*
 import kotlinx.android.synthetic.main.recyclerview_row.*
+import kotlinx.coroutines.Dispatchers
 import java.util.EnumSet.of
+import kotlin.coroutines.CoroutineContext
 
 class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
 
     lateinit var recyclerViewAdapter: RecyclerViewAdapter
     lateinit var viewModel: MainActivityViewModel
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +42,7 @@ class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
             layoutManager = LinearLayoutManager ( this@DataActivity)
             recyclerViewAdapter = RecyclerViewAdapter(this@DataActivity)
             adapter = recyclerViewAdapter
-           // val divider = DividerItemDecoration(applicationContext, VERTICAL)
-            //addItemDecoration(divider)
+
         }
 
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
@@ -52,30 +58,39 @@ class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
 
 
 
-            val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS,0)
-
-
-
-            tvScoreData.text = " Your score is $correctAnswers "
-
-
             if (saveButton.text.equals("Save")) {
                 val player = PlayerEntity(0, name, email)
                 viewModel.insertPlayerInfo(player)
             }else {
-                val player = PlayerEntity(nameInput.getTag(nameInput.id).toString().toInt(), name,email  // tirar caso n resulte
+                val player = PlayerEntity(nameInput.getTag(nameInput.id).toString().toInt(), name,email
                 )
                 viewModel.updatePlayerInfo(player)
                 saveButton.setText("Save")
             }
             nameInput.setText("")
             emailInput.setText("")
-            myScore.text
 
 
 
+            btnPlayAgain.setOnClickListener {
+                startActivity(Intent(this, HomeActivity::class.java))
+            }
         }
+
+        //getScoreCountry()
     }
+/*
+    private fun getScoreCountry () {
+        val correctAnswers = intent.getIntExtra(CORRECT_ANSWERS, 0)
+        val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS,0)
+
+
+
+        scoreFinal.text = "Your score is $correctAnswers out of $totalQuestions"
+
+    }
+
+ */
 
     override fun onDeletePlayerClickListener(player: PlayerEntity) {
         viewModel.deletePlayerInfo(player)

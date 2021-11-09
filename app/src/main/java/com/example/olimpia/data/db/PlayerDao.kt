@@ -13,6 +13,7 @@ interface PlayerDao {
     @Insert
     fun insertPlayer (player: PlayerEntity?)
 
+
     @Delete
     fun deletePlayer (player: PlayerEntity?)
 

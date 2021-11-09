@@ -23,9 +23,9 @@ class InstructionsActivityNames : AppCompatActivity() {
         val stb = AnimationUtils.loadAnimation(this,R.anim.stb);
 
 
-        val headertitle = findViewById(R.id.instruction_name) as TextView
+        val headertitle = findViewById<TextView>(R.id.instruction_name)
 
-        val image_instructions = findViewById(R.id.image_instructions) as ImageView
+        val image_instructions = findViewById<ImageView>(R.id.image_instructions)
 
 
 

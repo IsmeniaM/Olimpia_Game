@@ -1,18 +1,23 @@
 package com.example.olimpia.data
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.olimpia.R
+import com.example.olimpia.*
 import com.example.olimpia.data.db.PlayerEntity
+import kotlinx.android.synthetic.main.activity_data.*
 import kotlinx.android.synthetic.main.activity_data.view.*
+import kotlinx.android.synthetic.main.activity_result_country.*
 import kotlinx.android.synthetic.main.recyclerview_row.view.*
 import java.util.ArrayList
 
 class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     var items = ArrayList<PlayerEntity>()
+
+
 
     fun setListData(data: ArrayList<PlayerEntity>) {
         this.items = data
@@ -35,7 +40,7 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
             listener.onItemClickListener( items[position])
 
         }
-        holder.bind(items[position]) // bind(items[position])
+        holder.bind(items[position])
     }
 
 
@@ -43,6 +48,10 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
     class MyViewHolder(view: View, val listener: RowClicklistener): RecyclerView.ViewHolder(view) {
         val tvName = view.tvName
         val tvEmail = view.tvEmail
+        val tvScoreData = view.tvScoreData
+
+        val intent: Intent = Intent()
+
 
         val deletePlayerID = view.deletePlayerID
 
@@ -51,6 +60,15 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
 
             tvEmail.text = data.email
 
+
+
+            val totalQuestions = intent.getIntExtra(ConstantsCountry.TOTAL_QUESTIONS,5)
+            val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS,1)
+
+           // val totalQuestionsN = intent.getIntExtra(ConstantsNames.TOTAL_QUESTIONS,5)
+           // val correctAnswersN = intent.getIntExtra(ConstantsNames.CORRECT_ANSWERS,1)
+
+            tvScoreData.text = "$correctAnswers out of $totalQuestions"
 
 
             deletePlayerID.setOnClickListener {
@@ -62,6 +80,7 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
     }
 
     interface RowClicklistener {
+
         fun onDeletePlayerClickListener(player: PlayerEntity)
         fun onItemClickListener(player: PlayerEntity)
 

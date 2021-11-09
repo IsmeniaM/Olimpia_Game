@@ -16,21 +16,25 @@ class ResultActivityCountry : AppCompatActivity() {
         supportActionBar?.hide()
 
         val totalQuestions = intent.getIntExtra(ConstantsCountry.TOTAL_QUESTIONS,0)
-        val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS,0)
+        val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS, 0)
 
         tv_score_countries.text = "$correctAnswers out of $totalQuestions"
 
 
-        btn_register_score_country.setOnClickListener {
-            startActivity(Intent(this, DataActivity::class.java))
-        }
 
         btnCountries_finish.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
+        registerData()
 
+    }
 
+    private fun registerData () {
+
+        btn_register_score_country.setOnClickListener {
+            startActivity(Intent(this, DataActivity::class.java))
+        }
 
     }
 }

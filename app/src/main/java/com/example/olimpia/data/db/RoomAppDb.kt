@@ -33,9 +33,9 @@ abstract class RoomAppDb : RoomDatabase() {
             }
             return INSTANCE
         }
-        fun destroyInstance() {
-            INSTANCE = null
-        }
+        //fun destroyInstance() {
+        //    INSTANCE = null
+        //}
 
     }
 

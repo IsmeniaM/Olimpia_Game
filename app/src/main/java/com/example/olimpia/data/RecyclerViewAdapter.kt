@@ -15,21 +15,14 @@ import kotlinx.android.synthetic.main.activity_result_country.*
 import kotlinx.android.synthetic.main.recyclerview_row.view.*
 import java.util.ArrayList
 
-lateinit var scoreView : TextView
-
-
 class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     var items = ArrayList<PlayerEntity>()
-
-
-
 
     fun setListData(data: ArrayList<PlayerEntity>) {
         this.items = data
 
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_row,parent,false)
@@ -49,37 +42,19 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
         holder.bind(items[position])
     }
 
-
-
     class MyViewHolder(view: View, val listener: RowClicklistener): RecyclerView.ViewHolder(view) {
         val tvName = view.tvName
         val tvEmail = view.tvEmail
         val tvScoreData = view.tvScoreData
 
-
-
-        val intent: Intent = Intent()
-
-
         val deletePlayerID = view.deletePlayerID
+
 
         fun bind (data: PlayerEntity) {
 
             tvName.text = data.name
             tvEmail.text = data.email
             tvScoreData.text = data.score
-
-
-
-
-
-
-            val totalQuestions = intent.getIntExtra(ConstantsCountry.TOTAL_QUESTIONS,0)
-            val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS,0)
-
-
-
-            scoreView.text = "$correctAnswers out of $totalQuestions"
 
 
             deletePlayerID.setOnClickListener {
@@ -90,13 +65,7 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
         }
     }
 
-    fun namesScore() {
 
-        val intent: Intent = Intent()
-        val totalQuestionsN = intent.getIntExtra(ConstantsNames.TOTAL_QUESTIONS,5)
-         val correctAnswers = intent.getIntExtra(ConstantsNames.CORRECT_ANSWERS,1)
-
-    }
 
     interface RowClicklistener {
 

@@ -57,9 +57,6 @@ class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
             val score = scoreInput.text.toString()
 
 
-
-
-
             if (saveButton.text.equals("Save")) {
                 val player = PlayerEntity(0, name, email,score)
                 viewModel.insertPlayerInfo(player)
@@ -73,28 +70,31 @@ class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
             emailInput.setText("")
             scoreInput.setText("")
 
-
-
-
             btnPlayAgain.setOnClickListener {
                 startActivity(Intent(this, HomeActivity::class.java))
             }
         }
+        getScoreCountry()
+        getScoreNames()
 
-        //getScoreCountry()
     }
-/*
+
     private fun getScoreCountry () {
-        val correctAnswers = intent.getIntExtra(CORRECT_ANSWERS, 0)
-        val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS,0)
 
+        val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS, 0)
+        val totalQuestions = intent.getIntExtra(ConstantsCountry.TOTAL_QUESTIONS,0)
 
-
-        scoreFinal.text = "Your score is $correctAnswers out of $totalQuestions"
+        scoreView.text = "Your score is $correctAnswers out of $totalQuestions"
 
     }
 
- */
+    private fun getScoreNames () {
+        val correctAnswers = intent.getIntExtra(ConstantsNames.CORRECT_ANSWERS, 0)
+        val totalQuestions = intent.getIntExtra(ConstantsNames.TOTAL_QUESTIONS,0)
+
+        scoreView.text = "Your score is $correctAnswers out of $totalQuestions"
+
+    }
 
     override fun onDeletePlayerClickListener(player: PlayerEntity) {
         viewModel.deletePlayerInfo(player)
@@ -106,4 +106,6 @@ class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
         nameInput.setTag(nameInput.id, player.id)
         saveButton.setText("Update")
     }
+
+
 }

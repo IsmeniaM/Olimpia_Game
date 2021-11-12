@@ -4,6 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.olimpia.*
 import com.example.olimpia.data.db.PlayerEntity
@@ -13,9 +15,13 @@ import kotlinx.android.synthetic.main.activity_result_country.*
 import kotlinx.android.synthetic.main.recyclerview_row.view.*
 import java.util.ArrayList
 
+lateinit var scoreView : TextView
+
+
 class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     var items = ArrayList<PlayerEntity>()
+
 
 
 
@@ -50,25 +56,30 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
         val tvEmail = view.tvEmail
         val tvScoreData = view.tvScoreData
 
+
+
         val intent: Intent = Intent()
 
 
         val deletePlayerID = view.deletePlayerID
 
         fun bind (data: PlayerEntity) {
+
             tvName.text = data.name
-
             tvEmail.text = data.email
+            tvScoreData.text = data.score
 
 
 
-            val totalQuestions = intent.getIntExtra(ConstantsCountry.TOTAL_QUESTIONS,5)
-            val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS,1)
 
-           // val totalQuestionsN = intent.getIntExtra(ConstantsNames.TOTAL_QUESTIONS,5)
-           // val correctAnswersN = intent.getIntExtra(ConstantsNames.CORRECT_ANSWERS,1)
 
-            tvScoreData.text = "$correctAnswers out of $totalQuestions"
+
+            val totalQuestions = intent.getIntExtra(ConstantsCountry.TOTAL_QUESTIONS,0)
+            val correctAnswers = intent.getIntExtra(ConstantsCountry.CORRECT_ANSWERS,0)
+
+
+
+            scoreView.text = "$correctAnswers out of $totalQuestions"
 
 
             deletePlayerID.setOnClickListener {
@@ -77,6 +88,14 @@ class RecyclerViewAdapter (val listener: RowClicklistener): RecyclerView.Adapter
             }
 
         }
+    }
+
+    fun namesScore() {
+
+        val intent: Intent = Intent()
+        val totalQuestionsN = intent.getIntExtra(ConstantsNames.TOTAL_QUESTIONS,5)
+         val correctAnswers = intent.getIntExtra(ConstantsNames.CORRECT_ANSWERS,1)
+
     }
 
     interface RowClicklistener {

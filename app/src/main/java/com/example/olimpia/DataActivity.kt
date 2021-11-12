@@ -54,21 +54,25 @@ class DataActivity : AppCompatActivity(), RecyclerViewAdapter.RowClicklistener {
         saveButton.setOnClickListener {
             val name = nameInput.text.toString()
             val email = emailInput.text.toString()
+            val score = scoreInput.text.toString()
+
 
 
 
 
             if (saveButton.text.equals("Save")) {
-                val player = PlayerEntity(0, name, email)
+                val player = PlayerEntity(0, name, email,score)
                 viewModel.insertPlayerInfo(player)
             }else {
-                val player = PlayerEntity(nameInput.getTag(nameInput.id).toString().toInt(), name,email
+                val player = PlayerEntity(nameInput.getTag(nameInput.id).toString().toInt(), name,email,score
                 )
                 viewModel.updatePlayerInfo(player)
                 saveButton.setText("Save")
             }
             nameInput.setText("")
             emailInput.setText("")
+            scoreInput.setText("")
+
 
 
 

@@ -6,7 +6,7 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 
-@Database(entities = [PlayerEntity::class], version = 1)
+@Database(entities = [PlayerEntity::class], version = 3)    // ter atencao à versao e migration tbm ; tenho sempre que aumentar a versao anterior
 abstract class RoomAppDb : RoomDatabase() {
 
     abstract fun playerDao(): PlayerDao?
@@ -16,9 +16,11 @@ abstract class RoomAppDb : RoomDatabase() {
 
         val migration_1_2: Migration = object: Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("ALTER TABLE playerinfo ADD COLUMN email TEXT DEFAULT ''")
+                database.execSQL("ALTER TABLE playerinfo ADD COLUMN score TEXT DEFAULT ''")
             }
         }
+
+
 
         fun getAppDatabase(context: Context): RoomAppDb? {
 
@@ -28,6 +30,7 @@ abstract class RoomAppDb : RoomDatabase() {
                     context.applicationContext, RoomAppDb::class.java, "AppDBB"
                 )
                     .addMigrations(migration_1_2)
+                    .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build()
             }
